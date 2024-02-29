@@ -19,8 +19,8 @@ jobs:
         run: npm run backstop:test
       - name: List Files
         run: ls public
-      - name: Upload Repository as Artifact
+      - name: Upload Public Folder as Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: repository
-          path: .
+          name: public-artifact
+          path: public
