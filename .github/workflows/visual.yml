@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: install backstopjs
-        run: npm install --force -g backstopjs &&  npx playwright install
+      - name: install project dependecies and playwright
+        run: npm install &&  npx playwright install
       - name: Create reference screenshot from source site
-        run: backstop reference
+        run: npm run backstop:reference
       - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)
-        run: backstop test
+        run: npm run backstop:test
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.0.10
         with:
