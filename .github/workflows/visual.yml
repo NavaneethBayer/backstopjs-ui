@@ -18,6 +18,6 @@ jobs:
       - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)
         run: npm run backstop:test
       - name: List Files
-        run: ls -R
+        run: ls public
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
