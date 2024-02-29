@@ -1,0 +1,26 @@
+name: Run BackstopJS test cases # Name of the action
+on:
+  push:
+  workflow_dispatch:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: backstop reference
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: install backstopjs
+        run: npm install --force -g backstopjs
+      - name: Create reference screenshot from source site
+        run: backstop reference
+      - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)
+        run: backstop test
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.0.10
+        with:
+         # Artifact name
+         name: Download report
+         # Destination path
+         path: backstop_data

@@ -1,0 +1,47 @@
+{
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812
+    }
+  ],
+  "onBeforeScript": "playwright/onBefore.cjs",
+  "onReadyScript": "playwright/onReady.cjs",
+  "scenarios": [
+    {
+      "label": "Scenario 1",
+      "url": "https://wsf-nxg-fe-next.vercel.app/tumorerkrankungen/behandlungsmethoden",
+      "referenceUrl": "https://space.bayer.de/patienten/krebserkrankungen/behandlungsmethoden",
+      "delay": 6000,
+      "cookiePath": "backstop_data/engine_scripts/cookies.json"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "public/bitmaps_reference",
+    "bitmaps_test": "public/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "public/report",
+    "ci_report": "public/ci_report",
+    "json_report": "src"
+  },
+  "report": ["json"],
+  "engine": "playwright",
+  "engineOptions": {
+    "browser": "chromium"
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
