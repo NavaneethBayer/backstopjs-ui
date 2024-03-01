@@ -44,15 +44,9 @@ export default function Home() {
                   {website.domain}
                 </p>
               </div>
-
-              <div className="mt-20">
-                <h4 className="text-xl font-medium">
-                  Found total of <span className="font-bold">3000</span> pages
-                </h4>
-              </div>
               <div>
                 <a
-                  href={`/public/${website.name}/report/index.html`}
+                  href={`/${website.name}/report/index.html`}
                   className="inline-block my-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800"
                 >
                   View Report
