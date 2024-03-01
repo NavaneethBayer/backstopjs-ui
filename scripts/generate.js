@@ -1,15 +1,14 @@
-import { configGenerator } from './config-generator'
-// Get available sites to generate the config file
-const siteConfigs = [{
-    sitemapUrl: "https://space.bayer.es/sitemap-0.xml",
-    sitemapType:  "xml",
-    referenceDomain: "https://prodasrzyzsb.gatsbyjs.io",
-    domain: "wsf-nxg-fe-next.vercel.app",
-    fileName: 'bayer-es'
-}];
+import { configGenerator } from './config-generator.js';
+import { websites } from '../website-config.js';
 
 (async () => {
-    siteConfigs.map(async (siteConfig) => {
-        await configGenerator(siteConfig)
-    })
+    try {
+        for (const siteConfig of websites) {
+            console.log(`Generating configuration for ${siteConfig.name}...`);
+            await configGenerator(siteConfig);
+            console.log(`Configuration for ${siteConfig.name} generated successfully.`);
+        }
+    } catch (error) {
+        console.error('Error generating configurations:', error);
+    }
 })();

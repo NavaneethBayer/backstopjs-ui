@@ -1,60 +1,122 @@
-import fs from "fs"
-import fetch from "node-fetch"
-import { parseString } from "xml2js"
+import fs from "fs/promises";
+import path from "path";
+import fetch from "node-fetch";
+import { chromium } from "playwright";
+import fse from "fs-extra";
 
-// const defaultConfig = require('../backstop-default.json');
+import defaultConfig from "../backstop-default.json" assert { type: "json" };
+
+export const JSON_API_ENDPOINT = "/api/bayer-pharma-core/valid-paths";
+
+async function fetchCookiesFromUrl(urls, referenceDomain) {
+  const url = "https://" + referenceDomain + urls[0];
+  console.log('fetching cookies from ', url)
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  try {
+
+    const page = await context.newPage();
+    await page.goto(url);
+    const cookies = await context.cookies();
+    return cookies;
+  } catch (error) {
+    console.error("Error fetching cookies:", error);
+  } finally {
+    await browser.close();
+  }
+}
+
+async function getUrlsFromJsonApi(referenceDomain) {
+  const sitemapUrl = "https://" + referenceDomain + JSON_API_ENDPOINT;
+
+  try {
+    const { paths } = await fetch(sitemapUrl).then((res) => res.json());
+    return paths;
+  } catch (error) {
+    console.error("Error fetching JSON API:", error);
+    return [];
+  }
+}
 
 export const configGenerator = async (config) => {
-  const { sitemapUrl , sitemapType, referenceDomain, domain, fileName } = config
-  const SITEMAP_URL = "https://space.bayer.es/sitemap-0.xml";
-  const NEXT_DOMAIN = "wsf-nxg-fe-next.vercel.app"
+  const { referenceDomain, name, domain, fileName } = config;
+  let urls = [];
 
-  function getNextJsUrl(url){
-     const urlParts = url.split("/");
-     urlParts[2] = NEXT_DOMAIN;
-     const convertedUrl = urlParts.join("/");
-     return convertedUrl;
+  urls = await getUrlsFromJsonApi(referenceDomain);
+
+  if (urls.length === 0) {
+    console.error("No URLs found. Exiting configuration generation.");
+    return;
   }
-  // Generate BackstopJS configuration
-  function generateBackstopConfig(urls) {
-    const scenarios = urls.map((url, index) => ({
+
+  // Set cookies for the website
+  const cookiePath = `backstop_data/${name}/engine_scripts/cookies.json`;
+  const cookies = await fetchCookiesFromUrl(urls, referenceDomain);
+
+  const scriptDir = new URL(".", import.meta.url).pathname;
+  const directoryPath = path.join(
+    scriptDir,
+    "..",
+    "backstop_data",
+    name,
+    "engine_scripts"
+  );
+
+  // Move the engine scripts specific to the website
+  const libDirectoryPath = path.resolve(
+    scriptDir,
+    "..",
+    "backstop_data",
+    "engine_scripts"
+  );
+  const destinationPath = path.join(directoryPath);
+  await fs.mkdir(libDirectoryPath, { recursive: true });
+  await fse.copy(libDirectoryPath, destinationPath);
+
+  // Move website cookies to correct location
+  await fs.mkdir(directoryPath, { recursive: true });
+  const filePath = path.join(directoryPath, "cookies.json");
+  await fs.writeFile(filePath, JSON.stringify(cookies, null, 2));
+  console.log("Cookies", cookies);
+  console.log("Cookies saved to", filePath);
+
+  const scenarios = urls.map((url, index) => {
+    // if json append the referencedomain with url
+    let urlValue = url;
+    let refUrl = url;
+
+    urlValue = "https://" + referenceDomain + url;
+    refUrl = "https://" + domain + url;
+
+    return {
       label: `Scenario ${index + 1}`,
-      url: getNextJsUrl(url),
-      referenceUrl: url,
+      url: urlValue,
+      referenceUrl: refUrl,
       delay: 6000,
-      cookiePath: "backstop_data/engine_scripts/cookies.json",
-    }));
-    const newConfig = { ...defaultConfig, scenarios };
-    return JSON.stringify(newConfig, null, 2);
+      cookiePath,
+    };
+  });
+
+  const newConfig = {
+    ...defaultConfig,
+    scenarios,
+    id: fileName,
+    paths: {
+      bitmaps_reference: `public/${name}/bitmaps_reference`,
+      bitmaps_test: `public/${name}/bitmaps_test`,
+      engine_scripts: `backstop_data/${name}/engine_scripts`,
+      html_report: `public/${name}/report`,
+      ci_report: `public/${name}/ci_report`,
+      json_report: `src/${name}`,
+    },
+  };
+
+  const backstopConfig = JSON.stringify(newConfig, null, 2);
+
+  try {
+    await fs.writeFile(`${fileName}.json`, backstopConfig);
+    console.log(`${fileName}.json created successfully.`);
+  } catch (error) {
+    console.error("Error writing BackstopJS configuration:", error);
   }
-
-  // Parse sitemap.xml and fetch the urls
-  async function getUrlsFromSitemap(sitemapUrl) {
-    try {
-      const response = await fetch(sitemapUrl);
-      const xml = await response.text();
-      let urls = [];
-      parseString(xml, (err, result) => {
-        if (err) {
-          console.error("Error parsing XML:", err);
-          return;
-        }
-
-        if (result && result.urlset && result.urlset.url) {
-          urls = result.urlset.url.map((url) => url.loc[0]);
-        } else {
-          console.error("No URLs found in the sitemap.");
-          return [];
-        }
-      });
-      return urls;
-    } catch (error) {
-      console.error("Error fetching sitemap:", error);
-    }
-  }
-
-  const urls = await getUrlsFromSitemap(SITEMAP_URL);
-
-  const config = generateBackstopConfig(urls);
-  fs.writeFileSync("backstop-testing.json", config);
-}
+};
