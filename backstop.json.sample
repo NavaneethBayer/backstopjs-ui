@@ -22,15 +22,8 @@
   "scenarios": [
     {
       "label": "Scenario 1",
-      "url": "https://prodt5et7qn5-hotfixapisitepaths.gatsbyjs.io/media/media-document",
-      "referenceUrl": "https://photonuksite-hotfixapisitepaths.gatsbyjs.io/media/media-document",
-      "delay": 6000,
-      "cookiePath": "backstop_data/bayer_hcp_uk/engine_scripts/cookies.json"
-    },
-    {
-      "label": "Scenario 2",
-      "url": "https://prodt5et7qn5-hotfixapisitepaths.gatsbyjs.io/media/adverse-events-should-be-reported",
-      "referenceUrl": "https://photonuksite-hotfixapisitepaths.gatsbyjs.io/media/adverse-events-should-be-reported",
+      "referenceUrl": "https://space.bayer.de/herzinsuffizienz/hfref-mode-disease-video",
+      "url": "https://wsf-nxg-fe-next.vercel.app/herzinsuffizienz/hfref-mode-disease-video",
       "delay": 6000,
       "cookiePath": "backstop_data/bayer_hcp_uk/engine_scripts/cookies.json"
     }

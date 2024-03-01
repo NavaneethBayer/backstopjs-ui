@@ -5,16 +5,6 @@
         "label": "desktop",
         "width": 1920,
         "height": 1080
-      },
-      {
-        "label": "phone",
-        "width": 320,
-        "height": 480
-      },
-      {
-        "label": "tablet",
-        "width": 1024,
-        "height": 768
       }
     ],
     "onBeforeScript": "playwright/onBefore.cjs",
@@ -31,9 +21,10 @@
     "report": ["json"],
     "engine": "playwright",
     "engineOptions": {
-      "browser": "chromium"
+      "browser": "chromium",
+      "storageState": "local-storage-file.json"
     },
-    "asyncCaptureLimit": 20,
+    "asyncCaptureLimit": 5,
     "asyncCompareLimit": 80,
     "debug": false,
     "debugWindow": false

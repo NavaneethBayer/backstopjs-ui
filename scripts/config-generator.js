@@ -5,6 +5,7 @@ import { chromium } from "playwright";
 import fse from "fs-extra";
 
 import defaultConfig from "../backstop-default.json" assert { type: "json" };
+import germanyCookies from "../space-bayer-de-cookies.json" assert { type: "json" };
 
 export const JSON_API_ENDPOINT = "/api/bayer-pharma-core/valid-paths";
 
@@ -51,7 +52,9 @@ export const configGenerator = async (config) => {
 
   // Set cookies for the website
   const cookiePath = `backstop_data/${name}/engine_scripts/cookies.json`;
-  const cookies = await fetchCookiesFromUrl(urls, referenceDomain);
+  // const cookies = await fetchCookiesFromUrl(urls, referenceDomain);
+  // Adding cookies for German site
+  const cookies = germanyCookies;
 
   const scriptDir = new URL(".", import.meta.url).pathname;
   const directoryPath = path.join(
@@ -77,7 +80,6 @@ export const configGenerator = async (config) => {
   await fs.mkdir(directoryPath, { recursive: true });
   const filePath = path.join(directoryPath, "cookies.json");
   await fs.writeFile(filePath, JSON.stringify(cookies, null, 2));
-  console.log("Cookies", cookies);
   console.log("Cookies saved to", filePath);
 
   const scenarios = urls.map((url, index) => {
@@ -85,14 +87,14 @@ export const configGenerator = async (config) => {
     let urlValue = url;
     let refUrl = url;
 
-    urlValue = "https://" + referenceDomain + url;
-    refUrl = "https://" + domain + url;
+    urlValue = "https://" + domain + url;
+    refUrl = "https://" + referenceDomain + url;
 
     return {
       label: `Scenario ${index + 1}`,
       url: urlValue,
       referenceUrl: refUrl,
-      delay: 6000,
+      delay: 8000,
       cookiePath,
     };
   });

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "domain": "wsf-nxg-fe-next.vercel.app",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "deeplink",
+    "value": "jbotpwJWuFV5_tD60PMBQxj2hJlkqVlGwdQoowJS1NQJepiuDfV4xUZQ3oet",
+    "domain": "wsf-nxg-fe-next.vercel.app",
+    "path": "/",
+    "expires": 1709292588.079928,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "OptanonAlertBoxClosed",
+    "value": "2024-03-01T08:43:01.438Z",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1740818581,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.377056373.1709282581",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1717058581,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.3.183439796.1709282581",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1724843619,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_gid",
+    "value": "GA1.3.1054520292.1709282581",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1709378019,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_sfid_568c",
+    "value": "{%22anonymousId%22:%22d4882f714344ac00%22}",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1743851619.352893,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_evga_e685",
+    "value": "{%22uuid%22:%22d4882f714344ac00%22}",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1743851619.355779,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.183439796.1709282581",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1743851619.163636,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hjSessionUser_3816927",
+    "value": "eyJpZCI6IjBiYmU5OWIwLWZmNjMtNTI3Ni1hZjYzLTM2NjVhY2ZhODQwMyIsImNyZWF0ZWQiOjE3MDkyODI1NzcyNjMsImV4aXN0aW5nIjp0cnVlfQ==",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1740827619,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ak_bmsc",
+    "value": "B6866DEC9BE6DCD63C8ADCFFD74CF37E~000000000000000000000000000000~YAAQNEYDF4bWju6NAQAAATq4+RYYyO1Lyo0lg7xmTpb2Sh/hd5FOqr4eJmWlHEnLqy3wV+gt32pZXW2KI8EiADMuRXIjZufB9cFJGZj9tyg5/u7Gpz8VMTpNPhkCpWi74+e3T98wDwrkdzPpxHUcZJr+UhgEzZe6dDE2cpoPY4kxVT41tH8wyT6n9nQMjy6U7eH//es+amgo/rLuQUNsrXNB6MldQwbXysAny0f7k4yR6ReGPCD8hTtcU30qPFVPVcr9+3J4YMHW2aPDWcjl+wO0N7CvIaIJVDZRyf1/RAkQWNZzSagCvuQUTBT45MoA9IyAwl5AMNk5C0UlIYLjI7Z+QL+9/JBnuTNCIlz44oMYXRgxVZXh6tBNYQfeArLjqQ0ehKIsoy0=",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1709298815.711441,
+    "httpOnly": true,
+    "secure": false
+  },
+  {
+    "name": "OptanonConsent",
+    "value": "isGpcEnabled=0&datestamp=Fri+Mar+01+2024+16%3A43%3A38+GMT%2B0530+(India+Standard+Time)&version=202309.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=dd7ecbd6-759f-4df7-91f0-257820cc029c&interactionCount=1&landingPath=NotLandingPage&groups=C0004%3A1%2CC0003%3A1%2CC0002%3A1%2CC0001%3A1&geolocation=IN%3BKA&AwaitingReconsent=false",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1740827618,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cookie_consent_ot",
+    "value": "true",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1709293418,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_ga_8CTSNRDC64",
+    "value": "GS1.1.1709291619.3.0.1709291619.60.0.0",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1743851619.162739,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_hjSession_3816927",
+    "value": "eyJpZCI6Ijk5NTk2YTBhLWVlNDUtNDU2NC1iOTY2LWIxODJiYmRiZDM5MiIsImMiOjE3MDkyOTE2MTkyNjksInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowfQ==",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1709293419,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_ga_8CTSNRDC64",
+    "value": "GS1.3.1709291619.3.0.1709291628.51.0.0",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1724843628,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "deeplink",
+    "value": "jbotpwJWuFV5_tD60PMBQxj2hJlkqVlGwdQoowJS1NQJepiuDfV4xUZQ3oet",
+    "domain": "space.bayer.de",
+    "path": "/",
+    "expires": 1709295246.050319,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "bm_sv",
+    "value": "5EB5D5E122420ECF9B45D1DD2798D338~YAAQNEYDF7naju6NAQAAI+O4+RZioQXNUfLNPmk7dTsLBM3A8/8chT5t4qxXJUZ14mGueo+912U5b+rN40L0QZLLBfrN6XxaN3RaAziVRdM5yAuGodTjB12BH7iyoroG47FFwS0uqLlRtPZ1LLg8Azh+/zUd0jmOCBIso6l8a5CXCeAUalLtksxTn+7PTrakPtlVvkc/+UNdJEG3LNkg81htWIQBxT47euR1tgctMaHeH2d/LHHPsWCZaVkLpqk=~1",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1709298817.059153,
+    "httpOnly": false,
+    "secure": true
+  }
+]
