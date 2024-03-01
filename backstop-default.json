@@ -24,8 +24,8 @@
       "browser": "chromium",
       "storageState": "local-storage-file.json"
     },
-    "asyncCaptureLimit": 5,
-    "asyncCompareLimit": 80,
+    "asyncCaptureLimit": 20,
+    "asyncCompareLimit": 100,
     "debug": false,
     "debugWindow": false
   }
