@@ -1,0 +1,76 @@
+{
+  "id": "bayer-space-uk",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "playwright/onBefore.cjs",
+  "onReadyScript": "playwright/onReady.cjs",
+  "scenarios": [
+    {
+      "label": "Scenario 1",
+      "url": "https://wsf-nxg-fe-next.vercel.app/der-zugriff-auf-diese-seite-ist-geschuetzt",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/der-zugriff-auf-diese-seite-ist-geschuetzt",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 2",
+      "url": "https://wsf-nxg-fe-next.vercel.app/sitemap",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/sitemap",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 3",
+      "url": "https://wsf-nxg-fe-next.vercel.app/datenschutzerklaerung",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/datenschutzerklaerung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 4",
+      "url": "https://wsf-nxg-fe-next.vercel.app/impressum",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/impressum",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 5",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nutzungsbedingungen",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/nutzungsbedingungen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 6",
+      "url": "https://wsf-nxg-fe-next.vercel.app/404-page-not-found",
+      "referenceUrl": "https://wsf-nxg-fe-next.vercel.app/404-page-not-found",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_uk/engine_scripts/cookies.json"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "public/bayer_space_uk/bitmaps_reference",
+    "bitmaps_test": "public/bayer_space_uk/bitmaps_test",
+    "engine_scripts": "backstop_data/bayer_space_uk/engine_scripts",
+    "html_report": "public/bayer_space_uk/report",
+    "ci_report": "public/bayer_space_uk/ci_report",
+    "json_report": "reports/bayer_space_uk"
+  },
+  "report": [
+    "json"
+  ],
+  "engine": "playwright",
+  "engineOptions": {
+    "browser": "chromium",
+    "storageState": "local-storage-file.json"
+  },
+  "asyncCaptureLimit": 20,
+  "asyncCompareLimit": 100,
+  "debug": false,
+  "debugWindow": false
+}

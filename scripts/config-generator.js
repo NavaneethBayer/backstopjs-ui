@@ -109,7 +109,7 @@ export const configGenerator = async (config) => {
       engine_scripts: `backstop_data/${name}/engine_scripts`,
       html_report: `public/${name}/report`,
       ci_report: `public/${name}/ci_report`,
-      json_report: `src/${name}`,
+      json_report: `reports/${name}`,
     },
   };
 

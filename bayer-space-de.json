@@ -1,0 +1,76 @@
+{
+  "id": "bayer-space-de",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "playwright/onBefore.cjs",
+  "onReadyScript": "playwright/onReady.cjs",
+  "scenarios": [
+    {
+      "label": "Scenario 1",
+      "url": "https://wsf-nxg-fe-next.vercel.app/der-zugriff-auf-diese-seite-ist-geschuetzt",
+      "referenceUrl": "https://space.bayer.de/der-zugriff-auf-diese-seite-ist-geschuetzt",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 2",
+      "url": "https://wsf-nxg-fe-next.vercel.app/sitemap",
+      "referenceUrl": "https://space.bayer.de/sitemap",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 3",
+      "url": "https://wsf-nxg-fe-next.vercel.app/datenschutzerklaerung",
+      "referenceUrl": "https://space.bayer.de/datenschutzerklaerung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 4",
+      "url": "https://wsf-nxg-fe-next.vercel.app/impressum",
+      "referenceUrl": "https://space.bayer.de/impressum",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 5",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nutzungsbedingungen",
+      "referenceUrl": "https://space.bayer.de/nutzungsbedingungen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    },
+    {
+      "label": "Scenario 6",
+      "url": "https://wsf-nxg-fe-next.vercel.app/404-page-not-found",
+      "referenceUrl": "https://space.bayer.de/404-page-not-found",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "public/bayer_space_de/bitmaps_reference",
+    "bitmaps_test": "public/bayer_space_de/bitmaps_test",
+    "engine_scripts": "backstop_data/bayer_space_de/engine_scripts",
+    "html_report": "public/bayer_space_de/report",
+    "ci_report": "public/bayer_space_de/ci_report",
+    "json_report": "reports/bayer_space_de"
+  },
+  "report": [
+    "json"
+  ],
+  "engine": "playwright",
+  "engineOptions": {
+    "browser": "chromium",
+    "storageState": "local-storage-file.json"
+  },
+  "asyncCaptureLimit": 20,
+  "asyncCompareLimit": 100,
+  "debug": false,
+  "debugWindow": false
+}
