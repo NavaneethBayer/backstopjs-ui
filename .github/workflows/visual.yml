@@ -21,16 +21,17 @@ jobs:
           mkdir -p artifacts
           cp -r backstop_data artifacts/
           cp -r public artifacts/
-      - name: Upload math result for job 1
+      - name: Upload references data
         uses: actions/upload-artifact@v4
         with:
           name: backstop_references
           path: artifacts
   run_tests:
     name: run backstop tests
+    needs: install_references
     runs-on: ubuntu-latest
     steps:
-      - name: Download math result for job 1
+      - name: Download references data
         uses: actions/download-artifact@v4
         with:
           name: backstop_references
