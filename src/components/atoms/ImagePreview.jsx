@@ -70,7 +70,8 @@ class ImagePreview extends React.Component {
   }
 
   render () {
-    let { hidden, settings, label, src } = this.props;
+    let { hidden, settings, label, src:imageSrc } = this.props;
+    let src = imageSrc.replace('public/', '');
     if (!src || src === '../..' || this.state.imgLoadError) {
       src = BASE64_PNG_STUB;
     }
