@@ -34,11 +34,7 @@ jobs:
       - name: Download references data
         uses: actions/download-artifact@v4
         with:
-          name: backstop_references
-      - name: Move Folders to root
-        run: |
-          mv artifacts/* .
-          rm -rf artifacts
+          name: backstop_reference
       - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)
         run: npm run backstop:test
       - name: Install Vercel CLI
