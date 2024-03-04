@@ -1,31 +1,11 @@
 import fs from "fs/promises";
 import path from "path";
 import fetch from "node-fetch";
-import { chromium } from "playwright";
 import fse from "fs-extra";
-
+import { fetchCookiesFromUrl } from './getCookies.js'
 import defaultConfig from "../backstop-default.json" assert { type: "json" };
-import germanyCookies from "../space-bayer-de-cookies.json" assert { type: "json" };
 
 export const JSON_API_ENDPOINT = "/api/bayer-pharma-core/valid-paths";
-
-async function fetchCookiesFromUrl(urls, referenceDomain) {
-  const url = "https://" + referenceDomain + urls[0];
-  console.log('fetching cookies from ', url)
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
-  try {
-
-    const page = await context.newPage();
-    await page.goto(url);
-    const cookies = await context.cookies();
-    return cookies;
-  } catch (error) {
-    console.error("Error fetching cookies:", error);
-  } finally {
-    await browser.close();
-  }
-}
 
 async function getUrlsFromJsonApi(referenceDomain) {
   const sitemapUrl = "https://" + referenceDomain + JSON_API_ENDPOINT;
@@ -52,9 +32,9 @@ export const configGenerator = async (config) => {
 
   // Set cookies for the website
   const cookiePath = `backstop_data/${name}/engine_scripts/cookies.json`;
-  // const cookies = await fetchCookiesFromUrl(urls, referenceDomain);
+  const cookies = await fetchCookiesFromUrl(urls[0], referenceDomain);
   // Adding cookies for German site
-  const cookies = germanyCookies;
+  // const cookies = germanyCookies;
 
   const scriptDir = new URL(".", import.meta.url).pathname;
   const directoryPath = path.join(
@@ -95,7 +75,7 @@ export const configGenerator = async (config) => {
       url: urlValue,
       referenceUrl: refUrl,
       delay: 8000,
-      cookiePath,
+      // cookiePath,
     };
   });
 
@@ -111,6 +91,10 @@ export const configGenerator = async (config) => {
       ci_report: `public/${name}/ci_report`,
       json_report: `reports/${name}`,
     },
+    engineOptions: {
+      ...defaultConfig.engineOptions,
+      storageState: cookiePath
+    }
   };
 
   const backstopConfig = JSON.stringify(newConfig, null, 2);

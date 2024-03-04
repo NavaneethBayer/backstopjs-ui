@@ -19,8 +19,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: install project dependecies and playwright
         run: npm install &&  npx playwright install
-      # - name: Generate config file
-      #   run: npm run backstop:generate
+      - name: Generate config file
+        run: npm run backstop:generate
       - name: Create reference screenshot from source site
         run: npm run backstop:reference
       - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)

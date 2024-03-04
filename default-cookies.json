@@ -1,0 +1,69 @@
+[
+  {
+    "name": "token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "domain": "wsf-nxg-fe-next.vercel.app",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "deeplink",
+    "value": "jbotpwJWuFV5_tD60PMBQxj2hJlkqVlGwdQoowJS1NQJepiuDfV4xUZQ3oet",
+    "domain": "wsf-nxg-fe-next.vercel.app",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "deeplink",
+    "value": "jbotpwJWuFV5_tD60PMBQxj2hJlkqVlGwdQoowJS1NQJepiuDfV4xUZQ3oet",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "OptanonAlertBoxClosed",
+    "value": "2024-03-04T09:07:14.894Z",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1741079234,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.944574624.1709543235",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1717319234,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cookie_consent_ot",
+    "value": "true",
+    "domain": ".bayer.de",
+    "path": "/",
+    "expires": 1709545034,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "OptanonConsent",
+    "value": "isGpcEnabled=0&datestamp=Mon+Mar+04+2024+14%3A37%3A14+GMT%2B0530+(India+Standard+Time)&version=202309.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=ba5b8ef0-a632-45fa-891f-0ed741feca3f&interactionCount=1&landingPath=NotLandingPage&groups=C0004%3A1%2CC0003%3A1%2CC0002%3A1%2CC0001%3A1",
+    "domain": ".space.bayer.de",
+    "path": "/",
+    "expires": 1741079234,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]
