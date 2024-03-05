@@ -21,8 +21,9 @@ jobs:
           UNZIP_DIR: .
         with:
           script: |
-            const script = require('./scripts/download-previous-artifact.js')
-            await script({github, context, core})
+            const pathToScript = './scripts/download-previous-artifact.js';
+            const script = await import(pathToScript);
+            await script.default({ github, context, core });
       - name: Cache node modules
         uses: actions/cache@v2
         with:
