@@ -1,0 +1,450 @@
+{
+  "id": "bayer-space-de",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "label": "mobile",
+      "width": 430,
+      "height": 932
+    }
+  ],
+  "onBeforeScript": "playwright/onBefore.cjs",
+  "onReadyScript": "playwright/onReady.cjs",
+  "scenarios": [
+    {
+      "label": "Scenario 1",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/fidelity-weltweit-grosstes-ckdt2d-studienprogramm-mit-13026-patienten",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/fidelity-weltweit-grosstes-ckdt2d-studienprogramm-mit-13026-patienten",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 2",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nexavar/pflichtangaben-nexavarr",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nexavar/pflichtangaben-nexavarr",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 3",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/umstellung",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/umstellung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 4",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/kerendiar-einfache-anwendung-1x-taglich",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/kerendiar-einfache-anwendung-1x-taglich",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 5",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/chronische-nierenerkrankung-bei-typ-2-diabetes-eine-schleichende-gefahr",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/chronische-nierenerkrankung-bei-typ-2-diabetes-eine-schleichende-gefahr",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 6",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xofigo/pflichtangaben-xofigo",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xofigo/pflichtangaben-xofigo",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 7",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/news",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/news",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 8",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/pflichtangaben-verquvo",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/pflichtangaben-verquvo",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 9",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/arztinformationen",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/arztinformationen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 10",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/hessen",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/hessen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 11",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/verantwortungsvolle-anwendung",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/verantwortungsvolle-anwendung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 12",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/inflammation-und-fibrose-den-nieren-ein-entscheidender-risikofaktor-fur-die-ckd-progression",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/inflammation-und-fibrose-den-nieren-ein-entscheidender-risikofaktor-fur-die-ckd-progression",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 13",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/hamospermie-ein-neues-modell-zur-risikostratifizierung",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/hamospermie-ein-neues-modell-zur-risikostratifizierung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 14",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/kerendiar-ist-als-erster-und-einziger-nicht-steroidaler-mra-zur-behandlung-von-ckd-mit-albuminurie",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/kerendiar-ist-als-erster-und-einziger-nicht-steroidaler-mra-zur-behandlung-von-ckd-mit-albuminurie",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 15",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/sonstiges",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/sonstiges",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 16",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/einwilligung-datenschutz-formular",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/einwilligung-datenschutz-formular",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 17",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/pflichtangaben-xareltor",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/pflichtangaben-xareltor",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 18",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/praxistipp-kurzzeit-adt-und-strahlentherapie-sequenz-und-rt-feld-im-visier",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/praxistipp-kurzzeit-adt-und-strahlentherapie-sequenz-und-rt-feld-im-visier",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 19",
+      "url": "https://wsf-nxg-fe-next.vercel.app/vitrakvi/pflichtangaben",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/vitrakvi/pflichtangaben",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 20",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/was-kann-verquvor-ihren-patienten-bieten",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/was-kann-verquvor-ihren-patienten-bieten",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 21",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/das-redaktionsteam",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/das-redaktionsteam",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 22",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/perioperative-behandlung",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/perioperative-behandlung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 23",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/pflichtangaben",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/pflichtangaben",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 24",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/seo-so-verbessern-sie-selbst-die-sichtbarkeit-ihrer-praxis-im-netz",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/seo-so-verbessern-sie-selbst-die-sichtbarkeit-ihrer-praxis-im-netz",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 25",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/pflichttext-kerendia",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/pflichttext-kerendia",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 26",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/schleswig-holstein",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/schleswig-holstein",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 27",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/eine-fruhe-diagnose-der-ckd-ist-entscheidend",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/eine-fruhe-diagnose-der-ckd-ist-entscheidend",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 28",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xofigo/product-page-xofigo2",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xofigo/product-page-xofigo2",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 29",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/nordrhein",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/nordrhein",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 30",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/kerendia-vertraglichkeitsprofil-fidelity-weitgehend-auf-placebo-niveau",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/kerendia-vertraglichkeitsprofil-fidelity-weitgehend-auf-placebo-niveau",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 31",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/materialien-zur-information-von-herzinsuffizienz-patienten",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/materialien-zur-information-von-herzinsuffizienz-patienten",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 32",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/praxistipp-verlangert-die-zink-gabe-nach-pca-diagnose-das-leben",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/praxistipp-verlangert-die-zink-gabe-nach-pca-diagnose-das-leben",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 33",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xofigo/product-page-created-dev-team",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xofigo/product-page-created-dev-team",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 34",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xofigo",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xofigo",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 35",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/sachsen-anhalt",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/sachsen-anhalt",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 36",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/product-test-dev-test",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/product-test-dev-test",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 37",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/nutzliche-internetseiten",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/nutzliche-internetseiten",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 38",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 39",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/finerenon-ein-fehlendes-puzzleteil-der-ckd-behandlung",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/finerenon-ein-fehlendes-puzzleteil-der-ckd-behandlung",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 40",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/tvtle/indikationen-tvtle",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/tvtle/indikationen-tvtle",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 41",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/hamburg",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/hamburg",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 42",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/videos",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/videos",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 43",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/behandlung-mit-verquvor",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/behandlung-mit-verquvor",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 44",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/allgemein/patienteninformationen",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/allgemein/patienteninformationen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 45",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/innovatives-therapieprinzip-bei-chronischer-nierenerkrankung-mit-typ-2-diabetes",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/innovatives-therapieprinzip-bei-chronischer-nierenerkrankung-mit-typ-2-diabetes",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 46",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/nieren-und-herz-im-blick-systemisch-therapieren-mit-den-innovativen-therapieoptionen",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/nieren-und-herz-im-blick-systemisch-therapieren-mit-den-innovativen-therapieoptionen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 47",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/figaro-dkd-klinische-phase-iii-studie-mit-fokus-auf-kardialer-wirksamkeit",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/figaro-dkd-klinische-phase-iii-studie-mit-fokus-auf-kardialer-wirksamkeit",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 48",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/heute-schon-verquvo-gedacht",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/heute-schon-verquvo-gedacht",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 49",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/wirksamkeit-und-sicherheit-auf-einen-blick",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/wirksamkeit-und-sicherheit-auf-einen-blick",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 50",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/baden-wurttemberg",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/baden-wurttemberg",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 51",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/saarland",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/saarland",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 52",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/sachsen",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/sachsen",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 53",
+      "url": "https://wsf-nxg-fe-next.vercel.app/nubeqa/die-goteborg-studie-1-einige-fakten",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/nubeqa/die-goteborg-studie-1-einige-fakten",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 54",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/bayern",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/bayern",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 55",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/kardiorenales-syndrom-wie-relevant-fur-die-klinische-praxis",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/kardiorenales-syndrom-wie-relevant-fur-die-klinische-praxis",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 56",
+      "url": "https://wsf-nxg-fe-next.vercel.app/xarelto/ktep/indikation-ktep",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/xarelto/ktep/indikation-ktep",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 57",
+      "url": "https://wsf-nxg-fe-next.vercel.app/verquvo/brandenburg",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/verquvo/brandenburg",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 58",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/ckd-progression-verlangsamen-kardiovaskulare-risiken-senken",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/ckd-progression-verlangsamen-kardiovaskulare-risiken-senken",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    },
+    {
+      "label": "Scenario 59",
+      "url": "https://wsf-nxg-fe-next.vercel.app/kerendia/fidelio-dkd-klinische-phase-iii-studie-mit-fokus-auf-renaler-wirksamkeit",
+      "referenceUrl": "https://wsfnxgfemain14689.gatsbyjs.io/kerendia/fidelio-dkd-klinische-phase-iii-studie-mit-fokus-auf-renaler-wirksamkeit",
+      "delay": 8000,
+      "cookiePath": "backstop_data/bayer_space_de/engine_scripts/default-cookies.json"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "public/bayer_space_de/bitmaps_reference",
+    "bitmaps_test": "public/bayer_space_de/bitmaps_test",
+    "engine_scripts": "backstop_data/bayer_space_de/engine_scripts",
+    "html_report": "public/bayer_space_de/report",
+    "ci_report": "public/bayer_space_de/ci_report",
+    "json_report": "reports/bayer_space_de"
+  },
+  "report": ["json"],
+  "engine": "playwright",
+  "engineOptions": {
+    "browser": "chromium",
+    "storageState": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
+  },
+  "asyncCaptureLimit": 20,
+  "asyncCompareLimit": 100,
+  "debug": false,
+  "debugWindow": false
+}
