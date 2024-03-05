@@ -443,8 +443,8 @@
     "browser": "chromium",
     "storageState": "backstop_data/bayer_space_de/engine_scripts/cookies.json"
   },
-  "asyncCaptureLimit": 20,
-  "asyncCompareLimit": 100,
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 20,
   "debug": false,
   "debugWindow": false
 }
