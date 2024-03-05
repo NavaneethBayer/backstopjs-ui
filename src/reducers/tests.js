@@ -52,15 +52,20 @@ const tests = (state = {}, action) => {
       }
       return state;
 
-    case "CHANGE_WEBSITE":
-      console.log(state);
-      console.log(action.value);
+    case "CHANGE_WEBSITE": {
+      const { data, viewport } = action.value;
       return {
         ...state,
-        all: action.value?.tests || [],
-        filtered: action.value?.tests || [],
+        all: data?.tests.filter(
+          (test) => test.pair.viewportLabel === viewport
+        ),
+        filtered: data?.tests.filter(
+          (test) => test.pair.viewportLabel === viewport
+        ),
         filterStatus: "all",
-      }
+        viewport: viewport,
+      };
+    }
     default:
       return state;
   }

@@ -72,8 +72,8 @@ class LogModal extends React.Component {
 
   render () {
     const {
-      visible
-      // logs: logPath
+      visible,
+      logs: logPath
     } = this.props.logs;
 
     const logLines = this.state.logLines;

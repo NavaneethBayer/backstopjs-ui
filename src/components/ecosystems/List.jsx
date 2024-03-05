@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import ReactPaginate from 'react-paginate';
 
 // organisms
 import TestCard from '../organisms/TestCard';
@@ -14,77 +15,77 @@ const ListWrapper = styled.section`
 
 const PaginationContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 20px;
   padding: 1rem;
   background: #fafafa;
   gap: 0.5rem;
+  max-width: 100%;
+  overflow: scroll;
 `;
 
 const PageNumber = styled.span`
-  margin: 0 5px;
   cursor: pointer;
   width: 30px;
   height: 30px;
-  text-align: center;
-  display: inline-block;
-  color: ${props => (props.active ? '#0f3850' : 'black')};
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${props => (props.active ? '#0f3850' : '#474747')};
+  font-weight: ${props => (props.active ? 'bold' : 'normal')};
   &:hover {
     background-color: #f0f0f0;
   }
 `;
 
 const List = ({ tests, settings }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5); // Adjust items per page as needed
-
   const onlyText =
     !settings.refImage && !settings.testImage && !settings.diffImage;
+  const itemsPerPage = 10;
+    // Here we use item offsets; we could also use page offsets
+  // following the API or data you're working with.
+  const [itemOffset, setItemOffset] = useState(0);
 
-    useEffect(() => {
-      setCurrentPage(1);
-    }, [tests]);
+  // Simulate fetching items from another resources.
+  // (This could be items from props; or items loaded in a local state
+  // from an API endpoint with useEffect and useState)
+  const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = tests.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(tests.length / itemsPerPage);
 
-  // Calculate index range based on current page and items per page
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = Math.min(startIndex + itemsPerPage, tests.length);
-
-  // Slice tests array based on calculated index range
-  const paginatedTests = tests.slice(startIndex, endIndex);
-
-  // Handle click on page number
-  const handleClick = pageNumber => {
-    setCurrentPage(pageNumber);
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % tests.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
   };
-
-  // Calculate total number of pages
-  const totalPages = Math.ceil(tests.length / itemsPerPage);
 
   return (
     <>
       <ListWrapper>
-        {paginatedTests.map((test, i) => (
+        {currentItems.map((test, i) => (
           <TestCard
-            id={`test${startIndex + i}`} // Use unique IDs
-            numId={startIndex + i} // Use numId to maintain consistency
+            key={i}
+            // numId
+            // lastId
             test={test}
-            key={startIndex + i} // Use key based on index in paginatedTests
-            lastId={startIndex + paginatedTests.length - 1} // Calculate lastId based on paginatedTests length
             onlyText={onlyText}
           />
         ))}
       </ListWrapper>
-      <PaginationContainer>
-        {[...Array(totalPages)].map((_, index) => (
-          <PageNumber
-            key={index}
-            active={index + 1 === currentPage}
-            onClick={() => handleClick(index + 1)}
-          >
-            {index + 1}
-          </PageNumber>
-        ))}
-      </PaginationContainer>
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+      />
     </>
   );
 };

@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import styled from 'styled-components';
-
-import { colors, fonts } from '../../styles';
+import React from "react";
+import { connect } from "react-redux";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { colors, fonts } from "../../styles";
 
 const SuiteNameTitle = styled.h1`
   font-size: 26px;
@@ -13,14 +13,18 @@ const SuiteNameTitle = styled.h1`
 `;
 
 class SuiteName extends React.Component {
-  render () {
-    return <SuiteNameTitle>Bayer's Visual Testing</SuiteNameTitle>;
+  render() {
+    return (
+      <Link to="/">
+        <SuiteNameTitle>Bayer's Visual Testing</SuiteNameTitle>
+      </Link>
+    );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    suiteName: state.suiteInfo.testSuiteName
+    suiteName: state.suiteInfo.testSuiteName,
   };
 };
 

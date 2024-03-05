@@ -19,7 +19,7 @@ const Image = styled.img`
 `;
 
 const Wrapper = styled.div`
-  flex: 1 1 auto;
+  flex: 1;
   padding: 0 25px;
   padding-top: ${props => (props.withText ? '10px' : '20px')};
   text-align: center;
@@ -56,7 +56,6 @@ class ImagePreview extends React.Component {
 
   onChange (isVisible) {
     if (isVisible && !this.state.isVisible) {
-      console.log('setting state to visible');
       this.setState({
         isVisible: true
       });
@@ -70,8 +69,8 @@ class ImagePreview extends React.Component {
   }
 
   render () {
-    let { hidden, settings, label, src:imageSrc } = this.props;
-    let src = imageSrc.replace('public/', '');
+    let { hidden, settings, label, src } = this.props;
+    console.log(src);
     if (!src || src === '../..' || this.state.imgLoadError) {
       src = BASE64_PNG_STUB;
     }

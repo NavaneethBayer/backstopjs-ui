@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { websites } from "../../../website-config.js";
-import { colors, fonts } from "../../styles";
+
 import {
   changeWebsite,
   setSuiteInfo
@@ -10,29 +10,10 @@ import {
 import { fetchWebsiteReport } from '../../helpers/reports'
 
 
-const IdTitle = styled.h3`
-  font-size: 14px;
-  font-family: ${fonts.arial};
-  font-weight: normal;
-  font-style: normal;
-  margin: 0;
-  color: ${colors.secondaryText};
-  flex: 1 0 auto;
-  padding-left: 15px;
-  margin-left: 15px;
-  margin-top: 7px;
-  position: relative;
-
-  :before {
-    content: "";
-    width: 2px;
-    height: 35px;
-    background: ${colors.borderGray};
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -10px;
-  }
+const Select = styled.select`
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
 `;
 
 class IdConfig extends React.Component {
@@ -40,19 +21,21 @@ class IdConfig extends React.Component {
   async fetchWebsiteInfo(website) {
     const { changeWebsite, setSuiteInfo } = this.props
     const data = await fetchWebsiteReport(website)
-    changeWebsite(data)
-    setSuiteInfo(data)
+    if(data){
+      changeWebsite(data)
+      setSuiteInfo(data)
+    }
   }
 
   render() {
     return (
-      <select onChange={(event) => {
+      <Select onChange={(event) => {
         this.fetchWebsiteInfo(event.target.value)
-      }} className="ml-4 p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
+      }}>
         {
-          websites.map(website =>  <option key={1} value={website.name}>{website.name}</option>)
+          websites.map(website =>  <option key={1} value={website.name}>{website.testName}</option>)
         }
-      </select>
+      </Select>
     );
   }
 }

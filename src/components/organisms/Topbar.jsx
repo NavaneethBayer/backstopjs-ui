@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles';
 
 import SuiteNameContainer from '../atoms/SuiteName';
-import IdContainer from '../atoms/IdContainer';
+// import IdContainer from '../atoms/IdContainer';
 import Logo from '../atoms/Logo';
 
 const TopbarWrapper = styled.section`
@@ -30,7 +30,6 @@ export default class Topbar extends React.Component {
     return (
       <TopbarWrapper>
         <SuiteNameContainer />
-        <IdContainer />
         <Separator />
       </TopbarWrapper>
     );

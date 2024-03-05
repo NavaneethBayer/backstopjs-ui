@@ -92,27 +92,13 @@ class TextDetails extends React.Component {
           <Label>filename: </Label>
           <Value onMouseOver={this.showPanel}>{fileName}</Value>
         </Row>
-        <DiffDetails suppress={!settings.textInfo} diff={diff} />
-
         <DetailsPanel {...{ showPanel }} onMouseLeave={this.hidePanel}>
-          <Row>
-            <Label>label: </Label>
-            <Value>{label} </Value>
-            <Label>selector: </Label>
-            <Value>{selector} </Value>
-          </Row>
           <Row>
             <Label>filename: </Label>
             <Value>{fileName} </Value>
           </Row>
           <Row>
-            {
-              ((referenceLog || testLog) &&
-                <LogDetails referenceLog={referenceLog} testLog={testLog} />
-              )
-            }
             <UrlDetails url={url} referenceUrl={referenceUrl} />
-            <DiffDetails diff={diff} />
           </Row>
         </DetailsPanel>
       </WrapperDetails>

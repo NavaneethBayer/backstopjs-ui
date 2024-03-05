@@ -59,9 +59,6 @@ class FiltersSwitch extends React.Component {
           onClick={this.props.onButtonClick}
           filterStatus={tests.filterStatus}
         />
-        <div>
-          Show Viewport filters
-        </div>
       </ButtonsWrapper>
     );
   }

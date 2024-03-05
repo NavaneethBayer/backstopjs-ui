@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { colors, fonts } from '../../styles';
+import React from "react";
+import styled from "styled-components";
+import { colors, fonts } from "../../styles";
 
 const Label = styled.span`
   font-family: ${fonts.latoRegular};
@@ -18,26 +18,26 @@ const Value = styled.span`
 
 const Link = styled.a`
   &::before {
-    content: ${props => (props.withSeperator ? '"|"' : '')};
-    margin: ${props => (props.withSeperator ? '0 10px' : '')};
+    content: ${(props) => (props.withSeperator ? '"|"' : "")};
+    margin: ${(props) => (props.withSeperator ? "0 10px" : "")};
   }
 `;
 
 export default class DiffDetails extends React.Component {
-  render () {
+  render() {
     const { url, referenceUrl } = this.props;
     return (
       <span>
         <Label>url: </Label>
         <Value>
-          <Link href={url} target="_blank">
-            test
-          </Link>
           {referenceUrl && (
-            <Link withSeperator href={referenceUrl} target="_blank">
-              reference
+            <Link  href={referenceUrl} target="_blank">
+              Reference Link
             </Link>
           )}
+          <Link withSeperator href={url} target="_blank">
+            Test Link
+          </Link>
         </Value>
       </span>
     );

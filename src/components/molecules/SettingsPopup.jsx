@@ -99,6 +99,7 @@ class SettingsPopup extends React.Component {
           value={settings.diffImage}
           onToggle={this.onToggle.bind(this, 'diffImage')}
         />
+        {/* Show viewports here */}
       </PopupWrapper>
     );
   }

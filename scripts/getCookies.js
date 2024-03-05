@@ -5,9 +5,9 @@ export async function fetchCookiesFromUrl(urlPath, referenceDomain) {
   const url = "https://" + referenceDomain + urlPath;
   console.log("fetching cookies from ", url);
   const browser = await chromium.launch();
-  const context = await browser.newContext();
+  const context = await browser.newContext({storageState: defaultCoookies});
   try {
-    await context.addCookies(defaultCoookies);
+    // await context.addCookies(defaultCoookies);
     const page = await context.newPage();
     await page.goto(url);
     await page.waitForLoadState("domcontentloaded");

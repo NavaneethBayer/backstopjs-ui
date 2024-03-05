@@ -11,7 +11,7 @@ async function processData() {
     console.log("error fetching json report");
   }
 }
-await processData();
+// await processData();
 
 /**
  * Parses a JSON string from local storage and handles any errors.
@@ -59,6 +59,7 @@ const defaultState = {
     all: window.tests?.tests || [],
     filtered: window.tests?.tests || [],
     filterStatus: "all",
+    viewport: "desktop"
   },
   scrubber: {
     visible: false,

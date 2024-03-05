@@ -5,6 +5,11 @@
         "label": "desktop",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "label": "mobile",
+        "width": 430,
+        "height": 932
       }
     ],
     "onBeforeScript": "playwright/onBefore.cjs",
@@ -16,7 +21,7 @@
         "engine_scripts": "backstop_data/engine_scripts",
         "html_report": "public/report",
         "ci_report": "public/ci_report",
-        "json_report": "src"
+        "json_report": "reports"
       },
     "report": ["json"],
     "engine": "playwright",
