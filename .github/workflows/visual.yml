@@ -21,8 +21,20 @@ jobs:
         run: npm install &&  npx playwright install
       # - name: Generate config file
       #   run: npm run backstop:generate
-      - name: Create reference screenshot from source site
-        run: npm run backstop:reference
+      - name: Download previous artifact
+        uses: actions/github-script@v6
+        continue-on-error: true
+        env:
+          WORKFLOW_FILENAME: visual.yml
+          ARTIFACT_NAME: backstop_references
+          ARTIFACT_FILENAME: backstop_references.zip
+          UNZIP_DIR: .
+        with:
+          script: |
+            const script = require('./scripts/download-previous-artifact.js')
+            await script({github, context, core})
+      # - name: Create reference screenshot from source site
+      #   run: npm run backstop:reference
       - name: Run the test(It will take the screenshot of the given site and will test against reference screenshot)
         run: npm run backstop:test
       - name: Create Artifacts

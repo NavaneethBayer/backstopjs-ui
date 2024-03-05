@@ -16,6 +16,7 @@ ul[role="navigation"] {
 ul[role="navigation"] li {
     display: inline-block;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 /* Pagination links */

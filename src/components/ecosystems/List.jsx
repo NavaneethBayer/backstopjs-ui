@@ -62,18 +62,23 @@ const List = ({ tests, settings }) => {
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
     setItemOffset(newOffset);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
     <>
       <ListWrapper>
-        {currentItems.map((test, i) => (
+        {currentItems.map((test, i, arr) => (
           <TestCard
-            key={i}
-            // numId
-            // lastId
-            test={test}
-            onlyText={onlyText}
+          id={`test${i}`}
+          numId={i}
+          test={test}
+          key={i}
+          lastId={arr.length - 1}
+          onlyText={onlyText}
           />
         ))}
       </ListWrapper>
